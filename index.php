@@ -4,6 +4,13 @@ session_start();
 
 // Configuração básica
 require_once 'config/database.php';
+
+// Roteamento básico (se necessário redirecionar para uma página padrão)
+if (!isset($_GET['controller']) && !isset($_GET['action'])) {
+    // Redireciona para a lista de produtos como página inicial
+    header("Location: index.php?controller=produto&action=index");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +35,7 @@ require_once 'config/database.php';
         </div>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="?controller=produto&action=index">
+                <a class="nav-link" href="?controller=produto&action=index">
                     <i class="fas fa-box"></i> Produtos
                 </a>
             </li>
@@ -40,6 +47,12 @@ require_once 'config/database.php';
             <li class="nav-item">
                 <a class="nav-link" href="?controller=venda&action=index">
                     <i class="fas fa-cash-register"></i> Vendas
+                </a>
+            </li>
+            <!-- Adicionando link para cadastrar produto -->
+            <li class="nav-item">
+                <a class="nav-link" href="?controller=produto&action=criarProduto">
+                    <i class="fas fa-plus"></i> Cadastrar Produto
                 </a>
             </li>
         </ul>
@@ -56,7 +69,7 @@ require_once 'config/database.php';
         <div class="container mt-4">
             <h1>Bem-vindo ao Sistema ZAYON</h1>
             <p>Gerencie seus produtos, estoque e vendas de forma eficiente com o ZAYON - PDV Comércio de Roupas.</p>
-            <!-- Aqui você pode adicionar conteúdo dinâmico ou dashboards futuros -->
+            <!-- Placeholder para conteúdo dinâmico futuro -->
         </div>
     </div>
 
