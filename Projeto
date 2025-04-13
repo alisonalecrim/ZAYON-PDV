@@ -1,0 +1,30 @@
+zayon-pdv/
+├── config/
+│   └── database.php
+├── models/
+│   ├── Produto.php
+│   ├── Estoque.php
+│   └── Venda.php
+├── controllers/
+│   ├── ProdutoController.php
+│   ├── EstoqueController.php
+│   └── VendaController.php
+├── views/
+│   ├── layouts/
+│   │   └── header.php
+│   │   └── footer.php
+│   ├── produtos/
+│   │   └── cadastrarProduto.php
+│   │   └── produto.php
+│   ├── estoque/
+│   │   └── estoque.php
+│   └── vendas/
+│       └── venda.php
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   └── img/
+│       └── logo.png
+├── index.php
+└── .htaccess

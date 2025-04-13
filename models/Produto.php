@@ -6,7 +6,7 @@ class Produto {
         $this->conn = $db;
     }
 
-    public function criarProduto($descricao, $preco, $quantidade, $codigo_barras, $cod_interno) {
+    public function cadastrarProduto($descricao, $preco, $quantidade, $codigo_barras, $cod_interno) {
         $query = "INSERT INTO produtos (descricao, preco, quantidade, codigo_barras, cod_interno) VALUES (:descricao, :preco, :quantidade, :codigo_barras, :cod_interno)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":descricao", $nome);
