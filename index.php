@@ -34,10 +34,14 @@ if (!isset($_GET['controller']) && !isset($_GET['action'])) {
             <h4 class="text-white mt-2">ZAYON</h4>
         </div>
         <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="?controller=produto&action=index">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-box"></i> Produtos
                 </a>
+                <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                    <li><a class="dropdown-item" href="?controller=produto&action=index">Listar Produtos</a></li>
+                    <li><a class="dropdown-item" href="?controller=produto&action=criarProduto">Cadastrar Produto</a></li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?controller=estoque&action=index">
@@ -47,12 +51,6 @@ if (!isset($_GET['controller']) && !isset($_GET['action'])) {
             <li class="nav-item">
                 <a class="nav-link" href="?controller=venda&action=index">
                     <i class="fas fa-cash-register"></i> Vendas
-                </a>
-            </li>
-            <!-- Adicionando link para cadastrar produto -->
-            <li class="nav-item">
-                <a class="nav-link" href="?controller=produto&action=criarProduto">
-                    <i class="fas fa-plus"></i> Cadastrar Produto
                 </a>
             </li>
         </ul>

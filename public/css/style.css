@@ -38,6 +38,8 @@
     color: var(--white);
     padding: 10px 20px;
     font-size: 16px;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar .nav-link:hover,
@@ -48,6 +50,48 @@
 
 .sidebar .nav-link i {
     margin-right: 10px;
+}
+
+/* Estilizar o submenu (dropdown) */
+.sidebar .dropdown-menu {
+    background-color: var(--dark-green); /* Cor de fundo do submenu */
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: static; /* Remove o posicionamento absoluto padrão */
+    width: 100%; /* Ocupa toda a largura do sidebar */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove sombra padrão */
+}
+
+.sidebar .dropdown-item {
+    color: var(--white) !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent; /* Fundo transparente para consistência */
+}
+
+.sidebar .dropdown-item:hover {
+    background-color: var(--primary-green); /* Cor ao passar o mouse */
+    color: var(--white) !important;
+}
+
+.sidebar .nav-item .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.5em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.3s; /* Animação suave da seta */
+}
+
+.sidebar .nav-item.show .dropdown-toggle::after {
+    transform: rotate(-90deg); /* Rota a seta ao abrir o dropdown */
 }
 
 /* Main Content */
