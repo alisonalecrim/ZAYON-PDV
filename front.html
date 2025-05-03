@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion PDV Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div class="logo">
+            <i class="fas fa-store"></i> <h1>Fashion PDV</h1>
+        </div>
+        <div class="user-info">
+            <span>Olá, Admin</span>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+
+        <section class="summary-cards">
+            <div class="card summary-card">
+                <div class="icon-container blue">
+                    <i class="fas fa-dollar-sign"></i> </div>
+                <div class="card-content">
+                    <p>Vendas Hoje</p>
+                    <strong>R$ 0,00</strong>
+                </div>
+            </div>
+            <div class="card summary-card">
+                <div class="icon-container green">
+                    <i class="fas fa-lock"></i> </div>
+                <div class="card-content">
+                    <p>Produtos Vendidos</p>
+                    <strong>0</strong>
+                </div>
+            </div>
+            <div class="card summary-card">
+                <div class="icon-container yellow">
+                    <i class="fas fa-exclamation-triangle"></i> </div>
+                <div class="card-content">
+                    <p>Estoque Baixo</p>
+                    <strong>0</strong>
+                </div>
+            </div>
+            <div class="card summary-card">
+                <div class="icon-container purple">
+                    <i class="fas fa-box"></i> </div>
+                <div class="card-content">
+                    <p>Total Produtos</p>
+                    <strong>0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-buttons">
+            <div class="card action-button blue-bg">
+                <i class="fas fa-calculator"></i> <h3>PDV</h3>
+                <p>Registrar Vendas</p>
+            </div>
+            <div class="card action-button green-bg">
+                <i class="fas fa-plus"></i> <h3>Cadastro</h3>
+                <p>Gerenciar Produtos</p>
+            </div>
+            <div class="card action-button gold-bg">
+                 <i class="fas fa-warehouse"></i> <h3>Estoque</h3>
+                <p>Relatório de Estoque</p>
+            </div>
+            <div class="card action-button purple-bg">
+                 <i class="fas fa-chart-line"></i> <h3>Vendas</h3>
+                <p>Relatório de Vendas</p>
+            </div>
+        </section>
+
+        <section class="data-tables">
+            <div class="card data-section">
+                <div class="data-header">
+                    <h3>Últimas Vendas</h3>
+                    <a href="#">Ver todas</a>
+                    <i class="fas fa-ellipsis-v options-icon"></i>
+                </div>
+                <div class="table-placeholder">
+                    <span>ID</span>
+                    <span>DATA</span>
+                    <span>VALOR</span>
+                    <span>PAGAMENTO</span>
+                </div>
+                </div>
+            <div class="card data-section">
+                <div class="data-header">
+                    <h3>Produtos Populares</h3>
+                    <a href="#">Ver todas</a>
+                     <i class="fas fa-ellipsis-v options-icon"></i>
+                </div>
+                <div class="table-placeholder">
+                    <span>PRODUTO</span>
+                    <span>PREÇO</span>
+                    <span>ESTOQUE</span>
+                    <span>VENDAS</span>
+                </div>
+                 </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
