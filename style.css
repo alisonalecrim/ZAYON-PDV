@@ -1,0 +1,235 @@
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f7fa; /* Light grey background similar to image */
+    color: #333;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #1e88e5; /* Default link color */
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-header .logo {
+    display: flex;
+    align-items: center;
+    color: #6a1b9a; /* Purple color from logo */
+    font-weight: bold;
+}
+
+.dashboard-header .logo i {
+    font-size: 1.8rem;
+    margin-right: 0.75rem;
+}
+
+.dashboard-header .logo h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.dashboard-header .user-info {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Main Content Area */
+.dashboard-main {
+    padding: 0 2rem 2rem 2rem; /* Padding around content */
+    max-width: 1400px;
+    margin: 0 auto; /* Center content */
+}
+
+/* General Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem; /* Space between elements/rows */
+    overflow: hidden; /* Ensure content fits */
+}
+
+/* Summary Cards Section */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between cards */
+    margin-bottom: 1.5rem;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem; /* Slightly adjust padding */
+}
+
+.summary-card .icon-container {
+    font-size: 1.5rem; /* Icon size */
+    padding: 0.8rem;
+    border-radius: 6px; /* Rounded square icons */
+    margin-right: 1rem;
+    color: #fff;
+    display: inline-flex; /* Center icon inside */
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+}
+/* Icon background colors */
+.summary-card .icon-container.blue { background-color: #42a5f5; } /* Light Blue */
+.summary-card .icon-container.green { background-color: #66bb6a; } /* Light Green */
+.summary-card .icon-container.yellow { background-color: #ffee58; color: #795548; } /* Yellow, adjust icon color */
+.summary-card .icon-container.purple { background-color: #ab47bc; } /* Light Purple */
+
+.summary-card .card-content p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+}
+
+.summary-card .card-content strong {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+}
+
+/* Action Buttons Section */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.action-button {
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 2rem 1rem; /* More padding for bigger buttons */
+}
+.action-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-button i {
+    font-size: 2.8rem; /* Larger icons */
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.action-button h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.action-button p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Action Button Background Colors */
+.action-button.blue-bg { background-color: #1e88e5; } /* Blue */
+.action-button.green-bg { background-color: #43a047; } /* Green */
+.action-button.gold-bg { background: linear-gradient(135deg, #e6af2e, #ca981a); } /* Gold gradient */
+.action-button.purple-bg { background-color: #8e24aa; } /* Purple */
+
+/* Data Tables Section */
+.data-tables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive, min width */
+    gap: 1.5rem;
+}
+
+.data-section .data-header {
+    display: flex;
+    justify-content: space-between; /* Push items apart */
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eee;
+    position: relative; /* Needed for absolute positioning of icon */
+}
+
+.data-section .data-header h3 {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 600;
+    flex-grow: 1; /* Allow h3 to take up space */
+    margin-right: 1rem; /* Space before link */
+}
+.data-section .data-header a {
+    font-size: 0.9rem;
+    color: #1e88e5;
+    white-space: nowrap; /* Prevent wrap */
+}
+
+.data-section .data-header .options-icon {
+    color: #aaa;
+    margin-left: 1rem; /* Space between link and icon */
+    cursor: pointer;
+}
+
+.table-placeholder {
+    color: #666; /* Darker grey for headers */
+    padding: 0.8rem 0;
+    font-size: 0.85rem;
+    font-weight: 500; /* Slightly bolder */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0; /* Lighter border for header */
+}
+.table-placeholder span {
+    flex: 1;
+    padding: 0 0.5rem;
+    text-align: left;
+}
+.table-placeholder span:last-child {
+    /* Adjust flex for last column if needed */
+     text-align: right;
+}
+/* Add styles for actual table rows when data is present */
+/* e.g., .data-row { display: flex; padding: 0.8rem 0; border-bottom: 1px solid #eee; } */
+/* .data-row span { flex: 1; padding: 0 0.5rem; } */
+
+
+/* Basic Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dashboard-header .user-info {
+         margin-top: 0.5rem;
+         align-self: flex-end;
+    }
+    .dashboard-main {
+        padding: 0 1rem 1rem 1rem;
+    }
+    /* Stack grids on smaller screens if desired, though auto-fit handles some of this */
+    .summary-cards, .action-buttons, .data-tables {
+         grid-template-columns: 1fr; /* Force single column */
+    }
+}
